@@ -1,0 +1,150 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-09-24T14:55:02.593Z",
+        "line": 14,
+        "name": "Verify if place is being added successfully",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-place-is-being-added-successfully;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1830000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Add place payload \"Apr constructions\"  \"English\" \"Dattathreya layout\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Apr constructions\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"Dattathreya layout\"",
+                  "offset": 49
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.add_place_payload(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2623000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user calls \"AddPlaceAPI\" with http \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_addplaceapi_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the API call is success with statuscode 200",
+            "match": {
+              "location": "stepDefinitions.StepDefinition.the_api_call_is_success_with_statuscode_200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1301000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the \"status\" in response should say \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_status_in_response_should_say_ok(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the \"scope\" in response should say \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_status_in_response_should_say_ok(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1678000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify place_id created maps to \"Apr constructions\" using \"getPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Apr constructions\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"getPlaceAPI\"",
+                  "offset": 58
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.verify_place_id_created_maps_to_using_get_place_api(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/AddPlaceFeature.feature",
+    "tags": []
+  }
+]
